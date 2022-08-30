@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Capl</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Description>Claims Authorization Policy Language for .NET Core v3.1</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/skunklab/piraeus</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/skunklab/capl</RepositoryUrl>
+    <PackageIcon>skunklab.png</PackageIcon>
+    <PackageReleaseNotes>CAPL - Claims Authorization Policy Language for .NET Core v.3.0</PackageReleaseNotes>
+    <Copyright>2018</Copyright>
+    <AssemblyName>Capl</AssemblyName>
+    <Version>3.1.8</Version>
+    <PackageId>Capl</PackageId>
+    <Authors>theskunklab@gmail.com</Authors>
+    <Company>Skunk Lab</Company>
+    <PackageTags>CAPL</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="skunklab.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="skunklab.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

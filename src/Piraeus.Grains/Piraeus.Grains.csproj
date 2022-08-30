@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>3.1.6</Version>
+    <Description>Piraeus grains for dotnet core 3.1.</Description>
+  </PropertyGroup>
+
+  <Target Name="ChangeAliasesOfStrongNameAssemblies" BeforeTargets="FindReferenceAssembliesForReferences;ResolveReferences">
+    <ItemGroup>
+      <ReferencePath Condition="'%(FileName)' == 'StackExchange.Redis.StrongName'">
+        <Aliases>signed</Aliases>
+      </ReferencePath>
+    </ItemGroup>
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.DataLake.Store" Version="1.1.20" />
+    <PackageReference Include="Microsoft.Azure.Devices" Version="1.20.1" />
+    <PackageReference Include="Microsoft.Azure.Devices.Client" Version="1.25.0" />
+    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.4.2" />
+    <PackageReference Include="Microsoft.Azure.EventGrid" Version="3.2.0" />
+    <PackageReference Include="Microsoft.Azure.EventHubs" Version="4.2.0" />
+    <PackageReference Include="Microsoft.Azure.ServiceBus" Version="4.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Orleans.Client" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.CodeGenerator.MSBuild" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Orleans.Core" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.OrleansAzureUtils" Version="2.4.5" />
+    <PackageReference Include="Microsoft.Orleans.OrleansProviders" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.OrleansRuntime" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Orleans.OrleansTelemetryConsumers.AI" Version="3.1.6" />
+    <PackageReference Include="StackExchange.Redis" Version="2.1.30" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orleans.Clustering.Redis\Orleans.Clustering.Redis.csproj" />
+    <ProjectReference Include="..\Orleans.Storage.Redis\Orleans.Storage.Redis.csproj" />
+    <ProjectReference Include="..\Piraeus.Auditing\Piraeus.Auditing.csproj" />
+    <ProjectReference Include="..\Piraeus.Configuration\Piraeus.Configuration.csproj" />
+    <ProjectReference Include="..\Piraeus.Core\Piraeus.Core.csproj" />
+    <ProjectReference Include="..\Piraeus.GrainInterfaces\Piraeus.GrainInterfaces.csproj" />
+    <ProjectReference Include="..\SkunkLab.Protocols\SkunkLab.Protocols.csproj" />
+  </ItemGroup>
+
+</Project>

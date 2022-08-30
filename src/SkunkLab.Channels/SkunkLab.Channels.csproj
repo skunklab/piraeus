@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>3.1.6</Version>
+    <RootNamespace>SkunkLab.Channels</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>Channel library for dotnet core 3.1.  TCP, UDP, Web socket, HTTP</Description>
+    <PackageProjectUrl>https://github.com/skunklab/bitrt</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>skunklab.png</PackageIcon>
+    <RepositoryUrl>https://github.com/skunklab/piraeus</RepositoryUrl>
+    <PackageTags>SkunkLab Channels BitRT</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyName>SkunkLab.Channels</AssemblyName>
+    <PackageId>SkunkLab.Channels</PackageId>
+    <Company>SkunkLab</Company>
+    <Authors>theskunklab@gmail.com</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.NetCore" Version="1.8.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.WebApiCompatShim" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="skunklab.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SkunkLab.Storage\SkunkLab.Storage.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="skunklab.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

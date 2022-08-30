@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Piraeus.Adapters</RootNamespace>
+    <AssemblyName>Piraeus.Adapters</AssemblyName>
+    <Version>3.1.6</Version>
+    <Description>Piraeus gateway adapters for channels and protocols.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.WebApiCompatShim" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Capl.Core\Capl.Core.csproj" />
+    <ProjectReference Include="..\Piraeus.Auditing\Piraeus.Auditing.csproj" />
+    <ProjectReference Include="..\Piraeus.Configuration\Piraeus.Configuration.csproj" />
+    <ProjectReference Include="..\Piraeus.Core\Piraeus.Core.csproj" />
+    <ProjectReference Include="..\Piraeus.Grains\Piraeus.Grains.csproj" />
+    <ProjectReference Include="..\SkunkLab.Channels\SkunkLab.Channels.csproj" />
+    <ProjectReference Include="..\SkunkLab.Storage\SkunkLab.Storage.csproj" />
+  </ItemGroup>
+
+</Project>
