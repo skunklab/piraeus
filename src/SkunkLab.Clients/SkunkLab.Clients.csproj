@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>3.1.6</Version>
+    <RootNamespace>SkunkLab.Clients</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>3.0.2.0</AssemblyVersion>
+    <FileVersion>3.0.2.0</FileVersion>
+    <Description>SkunkLab client library for dotnet core 3.1  CoAP, MQTT, REST.</Description>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/skunklab/bitrt</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>skunklab.png</PackageIcon>
+    <RepositoryUrl>https://github.com/skunklab/SkunkLab.Core</RepositoryUrl>
+    <AssemblyName>SkunkLab.Clients</AssemblyName>
+    <RepositoryType>https://github.com/skunklab/piraeus</RepositoryType>
+    <PackageTags>SkunkLab BitRT Clients</PackageTags>
+    <Authors>theskunklab@gmail.com</Authors>
+    <Company>SkunkLab</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SkunkLab.Channels\SkunkLab.Channels.csproj" />
+    <ProjectReference Include="..\SkunkLab.Protocols\SkunkLab.Protocols.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="skunklab.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="skunklab.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <Version>3.1.6</Version>
+    <Description>Piraeus tcp gateway for dotnet core 3.1.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.ApplicationInsights" Version="2.13.1" />
+    <PackageReference Include="Microsoft.Orleans.OrleansTelemetryConsumers.AI" Version="3.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Orleans.Clustering.Redis\Orleans.Clustering.Redis.csproj" />
+    <ProjectReference Include="..\Orleans.Storage.Redis\Orleans.Storage.Redis.csproj" />
+    <ProjectReference Include="..\Piraeus.Adapters\Piraeus.Adapters.csproj" />
+    <ProjectReference Include="..\Piraeus.Extensions\Piraeus.Extensions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="orleansconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="piraeusconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <Version>3.1.6</Version>
+    <Description>Piraeus web socket gateway for dotnet core 3.1.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="piraeusconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="piraeusconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="orleansconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.13.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.13.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.13.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.PerfCounterCollector" Version="2.13.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.WebApiCompatShim" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Capl.Core\Capl.Core.csproj" />
+    <ProjectReference Include="..\Piraeus.Adapters\Piraeus.Adapters.csproj" />
+    <ProjectReference Include="..\Piraeus.Configuration\Piraeus.Configuration.csproj" />
+    <ProjectReference Include="..\Piraeus.Core\Piraeus.Core.csproj" />
+    <ProjectReference Include="..\Piraeus.Extensions\Piraeus.Extensions.csproj" />
+    <ProjectReference Include="..\SkunkLab.Channels\SkunkLab.Channels.csproj" />
+    <ProjectReference Include="..\SkunkLab.Security\SkunkLab.Security.csproj" />
+    <ProjectReference Include="..\SkunkLab.Storage\SkunkLab.Storage.csproj" />
+  </ItemGroup>
+
+</Project>

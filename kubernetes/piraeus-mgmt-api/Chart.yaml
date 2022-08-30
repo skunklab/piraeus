@@ -1,0 +1,16 @@
+apiVersion: v2
+name: piraeus-mgmt-api
+description: A Helm chart for Piraeus Management API
+version: 0.0.3
+appVersion: 0.0.3
+keywords:
+  - piraeus
+  - orleans
+  - piraeus orleans
+home: https://github.com/skunklab/skunklab.core
+sources:
+  - https://github.com/skunklab/skunklab.core
+maintainers:
+  - name: Matt Long
+    email: malong@microsoft.com
+icon: https://avatars2.githubusercontent.com/u/25301165?s=400&v=4

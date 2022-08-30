@@ -1,0 +1,8 @@
+{
+  "dns": "some-dna",
+  "location": "some-location",
+  "issuer": "http://somewhere.cloudapp.azure.com/",
+  "audience": "http://somewhere.cloudapp.azure.com/",
+  "identityClaimType": "http://somewhere.cloudapp.azure.com/name",
+  "symmetricKey": "cryptic-key"
+}
